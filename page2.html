@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>USER_PRIVILEGE_LAB : PAGE 2</title>
+
+<!-- ✅ ฟอนต์ต้นฉบับ -->
+<link href="https://fonts.googleapis.com/css2?family=Michroma&family=Anuphan:wght@300;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-color: #080808;
+    --card-bg: #111111;
+    --border-color: #1a1a1a;
+    --accent-red: #c21d1d;
+    --accent-orange: #ff9d00;
+    --accent-lavender: #e0b0ff;
+    --text-main: #ffffff;
+    --text-muted: #888888;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Anuphan', sans-serif;
+    padding: 20px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.container { max-width: 800px; width: 100%; }
+
+.header-nav { margin-bottom: 30px; }
+
+.back-link {
+    color: var(--accent-orange);
+    text-decoration: none;
+    font-family: 'Michroma';
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-family: 'Michroma';
+    color: var(--accent-red);
+    font-size: clamp(20px, 6vw, 32px);
+    text-transform: uppercase;
+}
+
+.section {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 3px;
+    background: var(--accent-orange);
+}
+
+h2 {
+    font-family: 'Michroma';
+    font-size: 14px;
+    color: var(--accent-lavender);
+}
+
+.num-label { color: var(--accent-orange); margin-right: 10px; }
+
+.desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 10px 0;
+}
+
+pre {
+    background: #000;
+    padding: 18px;
+    border-radius: 12px;
+    font-family: 'JetBrains Mono';
+    font-size: 13px;
+    color: var(--accent-lavender);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header-nav">
+    <!-- ✅ แก้ให้ย้อนกลับได้ -->
+    <a href="privilege.html" class="back-link">< BACK_TO_CORE</a>
+    <h1>USER_PRIVILEGE_LAB : PAGE 2</h1>
+</div>
+
+<!-- เริ่มต่อจาก 54 -->
+<div class="section">
+<h2><span class="num-label">54.</span> FILE_SEARCH_ADVANCED</h2>
+<p class="desc">ค้นหาไฟล์ขั้นสูง</p>
+<pre>find / -type f -name "*.conf"</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">55.</span> PROCESS_KILL</h2>
+<p class="desc">หยุด process</p>
+<pre>kill -9 PID</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">56.</span> NETWORK_SCAN</h2>
+<p class="desc">ดู port ที่เปิด</p>
+<pre>ss -tulnp</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">57.</span> SERVICE_STATUS</h2>
+<p class="desc">ตรวจสอบ service</p>
+<pre>systemctl status nginx</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">58.</span> SERVICE_ENABLE</h2>
+<p class="desc">เปิด service อัตโนมัติ</p>
+<pre>systemctl enable nginx</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">59.</span> SERVICE_DISABLE</h2>
+<p class="desc">ปิด service</p>
+<pre>systemctl disable nginx</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">60.</span> DISK_CHECK</h2>
+<p class="desc">ดูพื้นที่ disk</p>
+<pre>df -h</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">61.</span> MEMORY_CHECK</h2>
+<p class="desc">ดู RAM</p>
+<pre>free -m</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">62.</span> PROCESS_MONITOR</h2>
+<p class="desc">ดู process realtime</p>
+<pre>top</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">63.</span> HTOP_VIEW</h2>
+<p class="desc">ดู process แบบ UI</p>
+<pre>htop</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">64.</span> CPU_INFO</h2>
+<p class="desc">ดูข้อมูล CPU</p>
+<pre>lscpu</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">65.</span> OS_INFO</h2>
+<p class="desc">ดูข้อมูลระบบ</p>
+<pre>uname -a</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">66.</span> USER_LIST</h2>
+<p class="desc">ดู user ทั้งหมด</p>
+<pre>cat /etc/passwd</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">67.</span> GROUP_LIST</h2>
+<p class="desc">ดู group</p>
+<pre>cat /etc/group</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">68.</span> SUDO_CHECK</h2>
+<p class="desc">ตรวจสอบสิทธิ sudo</p>
+<pre>sudo -l</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">69.</span> FILE_SIZE</h2>
+<p class="desc">ดูขนาดไฟล์</p>
+<pre>du -sh *</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">70.</span> LOG_MONITOR</h2>
+<p class="desc">ดู log realtime</p>
+<pre>tail -f /var/log/syslog</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">71.</span> PORT_CHECK</h2>
+<p class="desc">ตรวจสอบ port</p>
+<pre>netstat -tulnp</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">72.</span> PING_TEST</h2>
+<p class="desc">ทดสอบ network</p>
+<pre>ping google.com</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">73.</span> DOWNLOAD_FILE</h2>
+<p class="desc">ดาวน์โหลดไฟล์</p>
+<pre>wget URL</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">74.</span> SSH_CONNECT</h2>
+<p class="desc">เชื่อมต่อ SSH</p>
+<pre>ssh user@ip</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">75.</span> SCP_UPLOAD</h2>
+<p class="desc">อัปโหลดไฟล์</p>
+<pre>scp file user@host:/path</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">76.</span> HOSTNAME_CHANGE</h2>
+<p class="desc">เปลี่ยนชื่อเครื่อง</p>
+<pre>hostnamectl set-hostname newname</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">77.</span> DATE_CHECK</h2>
+<p class="desc">ดูเวลา</p>
+<pre>date</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">78.</span> TIME_SYNC</h2>
+<p class="desc">ตั้งเวลาอัตโนมัติ</p>
+<pre>timedatectl</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">79.</span> CRON_LIST</h2>
+<p class="desc">ดู cron job</p>
+<pre>crontab -l</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">80.</span> CRON_EDIT</h2>
+<p class="desc">แก้ cron</p>
+<pre>crontab -e</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">81.</span> PACKAGE_INSTALL</h2>
+<p class="desc">ติดตั้งโปรแกรม</p>
+<pre>apt install nginx</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">82.</span> PACKAGE_REMOVE</h2>
+<p class="desc">ลบโปรแกรม</p>
+<pre>apt remove nginx</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">83.</span> PACKAGE_UPDATE</h2>
+<p class="desc">อัปเดต repo</p>
+<pre>apt update</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">84.</span> PACKAGE_UPGRADE</h2>
+<p class="desc">อัปเกรดระบบ</p>
+<pre>apt upgrade</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">85.</span> REBOOT_SYSTEM</h2>
+<p class="desc">รีสตาร์ทเครื่อง</p>
+<pre>reboot</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">86.</span> SHUTDOWN_SYSTEM</h2>
+<p class="desc">ปิดเครื่อง</p>
+<pre>shutdown now</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">87.</span> MOVE_FILE</h2>
+<p class="desc">ย้ายไฟล์</p>
+<pre>mv file /path</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">88.</span> COPY_FILE</h2>
+<p class="desc">คัดลอกไฟล์</p>
+<pre>cp file /path</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">89.</span> DELETE_FILE</h2>
+<p class="desc">ลบไฟล์</p>
+<pre>rm file</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">90.</span> CREATE_FOLDER</h2>
+<p class="desc">สร้างโฟลเดอร์</p>
+<pre>mkdir folder</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">91.</span> DELETE_FOLDER</h2>
+<p class="desc">ลบโฟลเดอร์</p>
+<pre>rm -rf folder</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">92.</span> CHMOD</h2>
+<p class="desc">เปลี่ยน permission</p>
+<pre>chmod 755 file</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">93.</span> CHOWN</h2>
+<p class="desc">เปลี่ยน owner</p>
+<pre>chown user:group file</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">94.</span> GREP_SEARCH</h2>
+<p class="desc">ค้นหาข้อความ</p>
+<pre>grep "text" file</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">95.</span> ZIP_FILE</h2>
+<p class="desc">บีบอัดไฟล์</p>
+<pre>zip file.zip file</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">96.</span> UNZIP_FILE</h2>
+<p class="desc">แตก zip</p>
+<pre>unzip file.zip</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">97.</span> TAR_CREATE</h2>
+<p class="desc">สร้าง tar</p>
+<pre>tar -cvf file.tar folder</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">98.</span> TAR_EXTRACT</h2>
+<p class="desc">แตก tar</p>
+<pre>tar -xvf file.tar</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">99.</span> DISK_USAGE</h2>
+<p class="desc">ดูการใช้ disk</p>
+<pre>du -h</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">100.</span> WHOAMI</h2>
+<p class="desc">ดู user ปัจจุบัน</p>
+<pre>whoami</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">101.</span> LAST_LOGIN</h2>
+<p class="desc">ดู login ล่าสุด</p>
+<pre>last</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">102.</span> UPTIME</h2>
+<p class="desc">ดูเวลาที่เครื่องทำงาน</p>
+<pre>uptime</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">103.</span> CLEAR_SCREEN</h2>
+<p class="desc">ล้างหน้าจอ</p>
+<pre>clear</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">104.</span> ALIAS_SET</h2>
+<p class="desc">ตั้งคำสั่งลัด</p>
+<pre>alias ll="ls -la"</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">105.</span> ENV_VIEW</h2>
+<p class="desc">ดู environment</p>
+<pre>printenv</pre>
+</div>
+
+<div class="section">
+<h2><span class="num-label">106.</span> EXPORT_VAR</h2>
+<p class="desc">ตั้งตัวแปร env</p>
+<pre>export VAR=value</pre>
+</div>
+
+</div>
+
+</body>
+</html>
